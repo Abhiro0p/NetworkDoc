@@ -1,4 +1,4 @@
-# Docs++ - Distributed Document Collaboration System
+# NetworkDoc - Distributed Document Collaboration System
 
 A fully-featured distributed document collaboration system built in C, similar to Google Docs, supporting multi-user editing with strict access control, persistence, and efficient search.
 

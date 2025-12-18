@@ -15,37 +15,37 @@ All components communicate via TCP sockets using a custom message protocol.
 ## Features
 
 ### Core Functionality (150 points)
-- ✅ **CREATE**: Create empty files with automatic load balancing across storage servers
-- ✅ **READ**: Display full file contents with permission checking
-- ✅ **WRITE**: Sentence-level locking with atomic word-level edits (WRITE...ETIRW)
-- ✅ **DELETE**: Owner-only deletion with metadata cleanup
-- ✅ **VIEW**: List files with multiple display modes (-a, -l, -al)
-- ✅ **INFO**: Comprehensive file metadata (size, permissions, timestamps)
-- ✅ **STREAM**: Word-by-word streaming with 0.1s delay
-- ✅ **LIST**: Display all registered users
-- ✅ **UNDO**: One-step undo for any user (per-file)
-- ✅ **ADDACCESS/REMACCESS**: Granular permission management
-- ✅ **EXEC**: Execute file contents as shell commands
+- **CREATE**: Create empty files with automatic load balancing across storage servers
+- **READ**: Display full file contents with permission checking
+- **WRITE**: Sentence-level locking with atomic word-level edits (WRITE...ETIRW)
+- **DELETE**: Owner-only deletion with metadata cleanup
+- **VIEW**: List files with multiple display modes (-a, -l, -al)
+- **INFO**: Comprehensive file metadata (size, permissions, timestamps)
+- **STREAM**: Word-by-word streaming with 0.1s delay
+- **LIST**: Display all registered users
+- **UNDO**: One-step undo for any user (per-file)
+- **ADDACCESS/REMACCESS**: Granular permission management
+- **EXEC**: Execute file contents as shell commands
 
 ### System Requirements (40 points)
-- ✅ **Data Persistence**: SQLite-based storage surviving restarts
-- ✅ **Access Control**: Rigorous permission enforcement (owner/read/write)
-- ✅ **Logging**: Comprehensive logging with timestamps, IPs, operations
-- ✅ **Error Handling**: Uniform error codes and clear messages
-- ✅ **Efficient Search**: Trie-based file lookup (O(m) where m = filename length)
+- **Data Persistence**: SQLite-based storage surviving restarts
+- **Access Control**: Rigorous permission enforcement (owner/read/write)
+- **Logging**: Comprehensive logging with timestamps, IPs, operations
+- **Error Handling**: Uniform error codes and clear messages
+- **Efficient Search**: Trie-based file lookup (O(m) where m = filename length)
 
 ### Protocol Design (10 points)
-- ✅ **Startup**: Name Server starts first on fixed port (8080)
-- ✅ **Registration**: SS and clients register with NM on startup
-- ✅ **Dynamic SS Addition**: New storage servers can join anytime
-- ✅ **Atomic Operations**: Sentence-level locking with WRITE/ETIRW protocol
+- **Startup**: Name Server starts first on fixed port (8080)
+- **Registration**: SS and clients register with NM on startup
+- **Dynamic SS Addition**: New storage servers can join anytime
+- **Atomic Operations**: Sentence-level locking with WRITE/ETIRW protocol
 
 ### Bonus Features (50 points)
-- ✅ **Hierarchical Folders**: CREATEFOLDER command
-- ✅ **Checkpoints**: Create, list, and revert to file snapshots
-- ✅ **Access Requests**: Request/approve/reject access flow
-- ✅ **Replication**: Automatic file replication across storage servers
-- ✅ **Fault Tolerance**: Automatic failover to replica servers
+- **Hierarchical Folders**: CREATEFOLDER command
+- **Checkpoints**: Create, list, and revert to file snapshots
+- **Access Requests**: Request/approve/reject access flow
+- **Replication**: Automatic file replication across storage servers
+- **Fault Tolerance**: Automatic failover to replica servers
 
 ## Building the System
 
